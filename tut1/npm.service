@@ -1,0 +1,13 @@
+[Unit]
+Description=Nginx Proxy Manager
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=docker-compose up -d
+WorkingDirectory=<directory where the docker-compose.yml is located>
+
+[Install]
+WantedBy=multi-user.target
